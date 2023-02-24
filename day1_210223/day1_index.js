@@ -148,16 +148,29 @@ console.log(output4);
 
 // .reverse()
 // .join(', ')
-// .split(' ')
-// .includes()  // returns true or false
-// .indexOf()
 // .map((num) => num * 2)
 // .filter((num) => num % 2 === 0)
 // nqma insert, a se polzva splice
 
 
 // ---------------- //
+// sort()
+function listOfNames(namesArray) {
+    return [...namesArray]                                  // zapazva originalniq masiv
+        .sort((aName, bName) => aName.localeCompare(bName)) // names ascending
+        .map((el, index) => `${index + 1}.${el}`)
+        .join('\n')
+}
+listOfNames(["John", "Bob", "Christina", "Ema"])
+console.log(listOfNames(["John", "Bob", "Christina", "Ema"]))
+
+
+myArray.sort((aNumber, bNumber) => aNumber - bNumber) // numbers ascending
+
+
+// ---------------- //
 let numbersArray5 = [1, 2, 3, 4, 5, 6];
+console.log(numbersArray5.slice(1));        // vzima ot 1 natatyk
 console.log(numbersArray5.slice(1, 3));     // (2) [2, 3]
 console.log(numbersArray5.splice(0, 2));     // (2) [1, 2] are deleted
 console.log(numbersArray5.splice(0, 2));     // (2) [0, 2, ...toInsert] substitutes elements
@@ -165,6 +178,11 @@ console.log(numbersArray5.splice(0, 2));     // (2) [0, 2, ...toInsert] substitu
 numbersArray5.forEach((num) => {        // another method of iteration
     console.log(num);
 })
+
+
+// ---------------- //
+// .split(', ')
+// .includes()  // returns true or false
 
 
 // ---------------- //
@@ -176,3 +194,15 @@ console.log(text1.replace('He', 'Gd'))  // replaces He with Gd 1 time only
 string7 = '*'.repeat(4)
 console.log(string7)        // ****
 
+// Day 2
+// ---------------- //
+myString = String(myNumber)
+
+
+// ---------------- //
+// .indexOf()
+//if (templateArray[i].indexOf('*') !== -1)  // ako * ne e vytre vryshta -1!
+
+
+// ---------------- //
+'abc'.charCodeAt(0) // check the 0 index of the string and returns 97 from ASCI
